@@ -1,4 +1,4 @@
-<?
+<?php
 include_once($APLICATION_ROOT.'common/classes/form_classes/form_field.php');
 
 /*
@@ -14,7 +14,7 @@ class form_datetime_field extends form_field{
 	
 
     function form_datetime_field($name){
-         parent:: form_field($name);
+         parent::__construct($name);
          parent::set_type("datetime");
          $this->date_format=DATE_FORMAT_LONG;
          $this->date_type='DT_DATETIME';

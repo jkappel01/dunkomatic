@@ -1,4 +1,4 @@
-<?
+<?php
 include_once($APLICATION_ROOT.'common/classes/form_classes/form_field.php');
 
 /*
@@ -20,7 +20,7 @@ class form_selectboxdb_field extends form_field{
 
 
     function form_selectboxdb_field($name){
-         parent:: form_field($name);
+         parent::__construct($name);
          parent::set_type("selectboxdb");
          $this->save_field_name="";
          $this->display_field_name="";

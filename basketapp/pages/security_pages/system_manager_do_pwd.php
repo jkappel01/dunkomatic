@@ -42,7 +42,8 @@ if (($rs->fields["email"] != '') AND ($_SESSION['CONFIG_mail']!='N')){
 	    $mail->Host       = 'dunkomatic.de';  // Specify main and backup SMTP servers
 	    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
 	    $mail->Username   = 'dunkmaster@dunkomatic.de';                     // SMTP username
-	    $mail->Password   = 'W0q6nb6%';                               // SMTP password
+	 //   $mail->Password   = 'W0q6nb6%';                               // SMTP password
+      $mail->Password   = 'dunk2001DUNK'; 
 	    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 	    $mail->Port       = 587;                                    // TCP port to connect to
 	    $mail->SMTPOptions = array(
@@ -60,11 +61,11 @@ if (($rs->fields["email"] != '') AND ($_SESSION['CONFIG_mail']!='N')){
 			}
 			else
 			{
-					$mail->addAddress( $rs->fields["email"]);
+				$mail->addAddress( $rs->fields["email"]);
 			}
 
 	    $mail->isHTML(true);                                  // Set email format to HTML
-	    $mail->Subject = 'HBV: Ihre Benutzerkennung f�r Dunk-O-Matic';
+	    $mail->Subject = 'HBV: Ihre Benutzerkennung für Dunk-O-Matic';
 
 			$mail->Body  = "
 			<html>
@@ -89,6 +90,7 @@ if (($rs->fields["email"] != '') AND ($_SESSION['CONFIG_mail']!='N')){
 			</html>
 			";
 
+      $mail->CharSet = "UTF-8";
 	    $mail->send();
 	    $mail_status = 'Nachricht wurde verschickt';
 

@@ -1,4 +1,4 @@
-<?
+<?php
 include_once($APLICATION_ROOT.'common/functions/generate_sql.php');
 
 /**
@@ -26,7 +26,7 @@ class db_object{
 	*	@param table string object table name
 	*	@param pkey string object primary key name
 	*/
-	function db_object($conn,$table,$pkey){
+	function __construct($conn,$table,$pkey){
 		$this->conn=$conn;
 		$this->table=$table;
 		$this->pkey=$pkey;

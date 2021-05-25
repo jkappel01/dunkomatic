@@ -1,4 +1,4 @@
-<?
+<?php
 include_once($APLICATION_ROOT.'db_objects/db_object.class.php');
 include_once($APLICATION_ROOT.'objects/db_object_handler.class.php');
 
@@ -16,8 +16,8 @@ class security_handler extends db_object_handler{
 	* Constructor for security_handler
 	* @param $conn adodb connection
 	*/
-    function security_handler($conn){
-        parent::db_object_handler($conn);
+    function _construct($conn){
+        parent::__construct($conn);
     }
 
     //------------------------getters---------------------------
